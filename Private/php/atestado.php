@@ -2,11 +2,11 @@
 
 session_start();
 
-/*
+
 echo ("<pre>");
 print_r($_SESSION);
 echo ("</pre>");
-*/
+
 
 ?>
 
@@ -29,8 +29,32 @@ echo ("</pre>");
             <div class="col-7 logo-atestado">
                 <img src="../../Public/image/logo-escudo.png">
                 <h3>PORTAL ESCUDO SISTEMAS E TREINAMENTOS LTDA</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquam facilis perferendis voluptatum ipsam a, cum expedita mollitia, dolor pariatur est beatae. Earum, voluptas voluptatibus! Nemo facilis animi ipsa nesciunt?</p>
+                <p class="container-declaracao">Atesto para os devidos fins, que as pessoas abaixo relacionadas participam com bom aproveitamento do curso " <?php echo $_SESSION['nome_curso']; ?> - 
+                <?php echo $_SESSION['nivel_curso']; ?>", referente a empresa 
+                <?php echo $_SESSION['nome_empresa']; ?>, CNPJ 
+                <?php echo $_SESSION['cnpj_empresa']; ?>, localizada na Rua 
+                <?php echo $_SESSION['logradouro_empresa']; ?>, 
+                <?php echo $_SESSION['numero_empresa']; ?>, 
+                <?php echo $_SESSION['complemento_empresa']; ?>, 
+                <?php echo $_SESSION['bairro_empresa']; ?>, 
+                <?php echo $_SESSION['cidade_empresa']; ?>, 
+                <?php echo $_SESSION['estado_empresa']; ?>, 
+                <?php echo $_SESSION['cep_empresa']; ?>, promovido por este instrutor no periodo de 
+                <?php echo $_SESSION['datainicio_curso']; ?> a 
+                <?php echo $_SESSION['datafinal_curso']; ?> com carga horária de <?php echo $_SESSION['cargahoraria_curso']; ?> horas e estão 
+                <?php echo $_SESSION['aptidao_curso']; ?></p>
                 <p>Segue os nomes e dados dos alunos formados:</p>
+
+
+                <!-- 
+
+                    Criar tabela baseada no array $_SESSION['nome'][], fazendo um foreach e pegando os nomes e RGs.
+                    Criar a tabela automaticamente, conforme no número de registros no $_SESSION['nome'].
+
+                -->
+
+
+
             </div>
         </div>
     </div>
