@@ -16,6 +16,7 @@
             $consultas = new Consultas($conexao, $turma);
             $resultado = $consultas->read($filtro);
 
+            $_SESSION['nome'] = [];
             $_SESSION['nome_curso'] = [];
 
             if ($resultado) {
@@ -24,7 +25,9 @@
                         $curso = $turma['id_curso'];
                         $retorno = $consultas->readMore($curso);
                         foreach ($retorno as $aluno) {
-                            $_SESSION['nome'][] = $aluno['nome'];
+                            if (!in_array($aluno['nome'], $_SESSION['nome'])) {
+                                $_SESSION['nome'][] = $aluno['nome'];
+                            }
                         }
                     }
                     $_SESSION['nome_curso'] = $retorno[0]['nome_curso'];
