@@ -18,8 +18,8 @@
 
             <h3>Procure a turma que deseja pesquisar</h3>
                 
-                <form action="autenticacao.php" method="post">
-                    <select name="curso" id="" class="form-control">
+                <form action="autenticacao.php?action=read" method="post">
+                    <select name="filtro" id="" class="form-control">
                         <span class="input-group-text">Selecione a turma: </span>
                         <option value="">Selecione um valor</option>
                             <!-- CRIAR COM JS ou PHP -->
